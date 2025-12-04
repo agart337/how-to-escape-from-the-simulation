@@ -15,7 +15,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0.5vw;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: white;
     font-family: 'panchi-mono', 'Courier New', Courier, monospace;
 }
@@ -82,4 +82,27 @@ body {
     font-size: 1em;
 }
 
-/* HOMEPAGE GRID */
+/* IMAGE GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+    padding-top: 2em;
+    height: auto;
+    overflow-y: auto;
+}
+
+/* Each grid cell is a perfect square */
+.grid-item {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+/* Image behavior */
+.grid-item img {
+    max-width: 100%;
+    max-height: 100%;
+}
