@@ -22,18 +22,25 @@ body {
 
 /*DROPDOWN MENU*/
 .nav-menu {
-    position: relative;
+    position: fixed;
+    top: 0.5vw;
+    left: 0.5vw;
+    z-index: 2000;
     display: inline-block;
 }
 
 /* Dropdown button */
 .menu-button {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     border: none;
-    padding: 0.6em 1em;
+    padding: 0.6em 1.125em;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.125em;
     font-family: 'panchi-mono', 'Courier New', Courier, monospace;
+}
+
+.menu-button a {
+    color: #009640;
 }
 
 /* Dropdown list hidden */
@@ -56,6 +63,7 @@ body {
 /* CHAPTERS */
 .dropdown li>a {
     display: block;
+    font-size: 1.125em;
     padding: 0.3em 0.9em 0.1em 0.9em;
     text-decoration: none;
     color: black;
@@ -68,7 +76,7 @@ body {
 
 /* SUB-CHAPTERS */
 .sub-menu {
-    font-size: 1em;
+    font-size: 1.125em;
     font-family: 'panchi-mono', 'Courier New', Courier, monospace;
     list-style: none;
     padding-left: 1.4em;
@@ -79,14 +87,14 @@ body {
 }
 
 .sub-menu a {
-    font-size: 1em;
+    font-size: 1.125em;
 }
 
 /* IMAGE GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2em;
+    gap: 3em;
     padding-top: 2em;
     height: auto;
     overflow-y: auto;
@@ -105,4 +113,63 @@ body {
 .grid-item img {
     max-width: 100%;
     max-height: 100%;
+}
+
+/* CHAPTER COLUMN */
+p {
+    font-size: 1.125em;
+    line-height: 1.375em;
+    padding-bottom: 1.125em;
+    padding-left: 0.7em;
+}
+
+.column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em;
+    padding: 1em;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* text citations */
+.column2 {
+    padding-top: 2em;
+    padding-right: 5em;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.column2::-webkit-scrollbar {
+    display: none;
+}
+
+/* image citations */
+.column1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(13, auto);
+    gap: 2em;
+    padding-top: 2em;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding-right: 2em;
+}
+
+.column1::-webkit-scrollbar {
+    display: none;
+}
+
+.grid2-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid2-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
