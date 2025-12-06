@@ -165,7 +165,7 @@ p {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .grid2-item img {
